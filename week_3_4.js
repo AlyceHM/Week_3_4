@@ -36,74 +36,161 @@ console.log(sum / numArray.length)
 //if (each letter is equal to 1)
 
 //Use a loop to iterate through the array again and concatenate all the names together, separated by spaces. 
-// USE THE JOIN METHOD?
+
 let sum2 = 0
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']; 
 for (let i = 0; i < names.length; i++) {
 //console.log(names[i].length);
 sum2 = sum2 + names[i].length
 console.log(sum2);
-}
 console.log(sum2 / names.length);
+}
+let nameArray = []
+for (let i = 0; i < names.length; i++) {
+//console.log(names[i] + " ");
+let nameFinal = names[i] + " "
+nameArray.push(nameFinal);
+console.log(nameArray)
 
-let greeting = ["hello", "there"]
-console.log(greeting[0].length);
-
-
-
-//console.log(names[0].length);
-//console.log(names.length);
-
-//let i = names[0].length;
-//for (i = 0; i < names.length; i++);
-//console.log() 
-
-    //for(let i = names[0]; i < names.length; i++);
-    //console.log(names[i] +)
-    
-    
-    //for (let i = 0; i < Array.length; i++);
-       
-       //console.log(stringLength);
+}
 
 
-    //sumTotal = String.length + names.length
 
-    //for (let i = 0; i < Array.length; i++] {
-        //average[i] = 
-   // })
-//}
 
-//Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+
+
+
+
+
+//Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the 
+//length of each name to the nameLengths array.
 //For example:
 
 //namesArray = ["Kelly", "Sam", "Kate"] //given this array
 //nameLengths = [5, 3, 4] //create this new array
 
 
+let namesArray = ["Kelly", "Sam", "Kate"]
+let blankArray = []
+let someArray = 0
+for (i = 0; i < namesArray.length; i++) {
+let nueArray = namesArray[i].length;
+blankArray.push(nueArray);
+someArray += nueArray //addition assignment, adds each length of a name to the length of the name prior
+console.log(blankArray);
+
+
+
+    
+}
+
 
 
 // Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
 //(i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
 
-//function multiplyWords (race,3) {
-    //or (let i = 0; i <= 3; i++)
-    //console.log(multiplyWords);
+
+function multiplyWords(word, n) {
+    let words = " "
+    for (let i = 0; i < n; i++) {
+    console.log(i, words += word);
+    }
+}
+multiplyWords("hello", 3)
+
+
+
 
 
 //Write a function that takes two parameters, firstName and lastName, and returns a full name.
 //The full name should be the first and the last name separated by a space.
 
-//function nameIs(firstName,lastName)
-
- //   return firstName + " " + lastName;
-   //let fullName = (firstName + "x" + lastName);
-   //console.log(fullName);
-
+function fullName(firstName,lastName) {
+    console.log(firstName + " " + lastName);
+}
+fullName("Sally", "Field")
 
 
-//Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 
-//function [3, 2, 5, 8] {
+
+//Write a function that takes an array of numbers and returns true if the sum of all the 
+//numbers in the array is greater than 100.
     
 
+//I don't know why I can't get this to work!!! But everything I have seen online shows this is correct.
+function numbers(arrays) {
+    let numbers = 0;
+    for (let i = 0; i < arrays.length; i++) {
+    numbers += arrays[i];
+    
+   
+   
+
+}
+if (numbers[i] > 100) {   //I have tried this with both numbers[i] and arrays[i]
+    console.log("true");
+   }
+    else {
+        console.log("false");
+    }
+
+}
+
+numbers([25, 25, 25, 100])
+
+
+
+//Write a function that takes an array of numbers and returns the average of 
+//all the elements in the array.
+
+function numbers(arrays) {
+    let numbers = 0;
+    for (let i = 0; i < arrays.length; i++) {
+    numbers += arrays[i];
+    }
+    let newAverage = numbers / arrays.length
+    console.log(newAverage);
+}
+
+//Write a function that takes two arrays of numbers and returns true if the average 
+//of the elements in the first array is greater than the average of the elements in the second array.
+
+//I don't even know what to do with this question. I realize that I can use some iteration of the above problem but I don't
+//know how to have it "hold" information. Like- find the average of this array, now hold my beer why I find the average of the second 
+//array, and then let's compare them. Am I supposed to have two for loops?!
+
+function iHateThis(arr1, arr2) {
+let counter = 0;
+for (let i = 0; i < iHateThis.length; i++) {
+    counter += arr1[i];
+    }
+    let newAverage = counter / arr1.length
+    console.log(newAverage);
+
+}
+
+//Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket,
+//and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+
+function willBuyDrink(isHotOutside, moneyInPocket) {
+    if (isHotOutside == true && moneyInPocket > 10.50) {
+        console.log(true);
+    } 
+else {
+    console.log(false);
+}
+    }
+
+willBuyDrink(true, 15)
+
+
+function isJasmineHungry(timeOfDay, amountAlreadyEaten, noiseLevel) {
+    if (timeOfDay == 5-24 || amountAlreadyEaten < 6 || noiseLevel == true) {
+    console.log("Feed her before she eats something she shouldn't");
+}
+else {
+    console.log("You should probably feed her, anyway");
+}
+}
+
+isJasmineHungry(1, 8, false)
